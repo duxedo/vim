@@ -47,4 +47,5 @@ inoremap ,, <Esc>/<++><Enter>"_c4l
 vnoremap ,, <Esc>/<++><Enter>"_c4l
 map ,, <Esc>/<++><Enter>"_c4l
 autocmd FileType cpp inoremap ,c <ESC>bdwiclass <ESC>pa {<CR><++>;<CR>public:<CR><ESC>pa(){}<CR>~<ESC>pa(){}<CR>private:<CR><++>;};
+map <F11> <Esc>:call libcallnr("gvimfullscreen_64.dll", "ToggleFullScreen", 0)<CR> 
 
