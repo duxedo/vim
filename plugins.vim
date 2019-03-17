@@ -18,6 +18,7 @@ Plugin 'kana/vim-operator-user'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'neomake/neomake'
 if has('nvim')
  Plugin 'vim-airline/vim-airline'
  Plugin 'vim-airline/vim-airline-themes'
