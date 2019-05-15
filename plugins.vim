@@ -19,9 +19,10 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'neomake/neomake'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 if has('nvim')
- Plugin 'vim-airline/vim-airline'
- Plugin 'vim-airline/vim-airline-themes'
  Plugin 'JulioJu/neovim-qt-colors-solarized-truecolor-only'
 else
  Plugin 'altercation/vim-colors-solarized'
