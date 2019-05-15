@@ -15,8 +15,6 @@ exec 'source' path . '/statusline.vim'
 let g:android_sdk_path = 'C:\Work\Android\Sdk'
 let g:ackprg = 'ag --vimgrep'
 
-inoremap jk <Esc>
-
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
