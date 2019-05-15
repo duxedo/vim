@@ -7,7 +7,4 @@ if has("gui_running")
 
 "    set t_Co=256
     set guitablabel=%M\ %t
-    if !has('nvim')
-        set guifont=Noto_Mono_for_Powerline:h11:cRUSSIAN:qDRAFT
-    endif
 endif
