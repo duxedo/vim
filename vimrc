@@ -33,11 +33,13 @@ nmap <Leader>ge :YcmCompleter GoToDefinition<CR>
 nmap <Leader>gd :YcmCompleter GoToDeclaration<CR>
 nmap <Leader>gr :YcmCompleter GoToReferences<CR>
 
+if has("gui_running")
 if has('nvim')
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme solarized_nvimqt
 else
 colorscheme solarized
+endif
 endif
 
 " Return to last edit position when opening files (You want this!)
