@@ -62,4 +62,6 @@ nnoremap <F3> :cp<CR>
 nnoremap <F4> :cn<CR>
 nnoremap <F5> :Neomake!<CR>
 
+highlight Comment gui=NONE term=NONE
+
 exec 'source' path . '/local.vim'
