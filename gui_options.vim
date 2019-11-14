@@ -5,7 +5,18 @@ if has("gui_running")
     set guioptions-=r
     set guioptions-=L
     set guitablabel=%M\ %t
-if has("win32")
-    set renderoptions=type:directx,renmode:4,taamode:1
-endif
+    if has("win32")
+        "set renderoptions=type:directx,renmode:3,taamode:1
+        let g:solarized_termcolors=256
+        colorscheme solarized
+    endif
+    if has('nvim')
+        let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+        colorscheme solarized_nvimqt
+    endif
+else
+    if !has("win32")
+        let g:solarized_termcolors=256
+        colorscheme solarized
+    endif
 endif

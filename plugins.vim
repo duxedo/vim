@@ -9,7 +9,9 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mileszs/ack.vim'
-Plugin 'Valloric/YouCompleteMe'
+if has('python') || has('python3')
+Plugin 'ycm-core/YouCompleteMe'
+endif
 Plugin 'hsanson/vim-android'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
@@ -21,6 +23,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'neomake/neomake'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'kshenoy/vim-signature'
 
 if has('nvim')
  Plugin 'JulioJu/neovim-qt-colors-solarized-truecolor-only'
