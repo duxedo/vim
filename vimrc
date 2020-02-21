@@ -64,9 +64,12 @@ nnoremap <F3> :cp<CR>
 nnoremap <F4> :cn<CR>
 nnoremap <F5> :Neomake!<CR>
 
-nnoremap <C-,> :bp
-nnoremap <C-.> :bn
-nnoremap <C-/> :ls
+nnoremap <Leader>, :bp<CR>
+nnoremap <Leader>. :bn<CR>
+nnoremap <Leader>/ :ls<CR>:b
+
+nnoremap <Leader>cd :cd %:p:h<CR>
+
 
 highlight Comment gui=NONE term=NONE
 
