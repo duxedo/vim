@@ -38,11 +38,11 @@ nmap <Leader>gr :YcmCompleter GoToReferences<CR>
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-inoremap ,, <Esc>/<++><Enter>"_c4l
-vnoremap ,, <Esc>/<++><Enter>"_c4l
-map ,, <Esc>/<++><Enter>"_c4l
+"inoremap ,, <Esc>/<++><Enter>"_c4l
+"vnoremap ,, <Esc>/<++><Enter>"_c4l
+"map ,, <Esc>/<++><Enter>"_c4l
 
-autocmd FileType cpp inoremap ,c <ESC>bdwiclass <ESC>pa {<CR><++>;<CR>public:<CR><ESC>pa(){}<CR>~<ESC>pa(){}<CR>private:<CR><++>;};
+"autocmd FileType cpp inoremap ,c <ESC>bdwiclass <ESC>pa {<CR><++>;<CR>public:<CR><ESC>pa(){}<CR>~<ESC>pa(){}<CR>private:<CR><++>;};
 
 if has("win32")
     map <F11> <Esc>:call libcallnr("gvimfullscreen_64.dll", "ToggleFullScreen", 0)<CR> 

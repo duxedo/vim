@@ -28,7 +28,8 @@ Plugin 'kshenoy/vim-signature'
 if has('nvim')
  Plugin 'JulioJu/neovim-qt-colors-solarized-truecolor-only'
 else
- Plugin 'altercation/vim-colors-solarized'
+  Plugin 'altercation/vim-colors-solarized'
+  Plugin 'lifepillar/vim-solarized8'
 endif
 call vundle#end()            " required
 
