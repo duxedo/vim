@@ -3,15 +3,16 @@ filetype plugin off
 set rtp+=$HOME/.vim/bundle/Vundle.vim
 call vundle#begin('$HOME/.vim/bundle')
 Plugin 'VundleVim/Vundle.vim'
+if !exists('g:vscode')
 Plugin 'scrooloose/nerdtree'
+endif
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-surround'
+if !exists('g:vscode')
 Plugin 'airblade/vim-gitgutter'
-Plugin 'mileszs/ack.vim'
-if has('python') || has('python3')
-Plugin 'ycm-core/YouCompleteMe'
 endif
+Plugin 'mileszs/ack.vim'
 Plugin 'hsanson/vim-android'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
@@ -27,6 +28,7 @@ Plugin 'kshenoy/vim-signature'
 
 if has('nvim')
  Plugin 'JulioJu/neovim-qt-colors-solarized-truecolor-only'
+ Plugin 'lifepillar/vim-solarized8'
 else
   Plugin 'altercation/vim-colors-solarized'
   Plugin 'lifepillar/vim-solarized8'

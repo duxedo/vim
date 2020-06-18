@@ -21,20 +21,16 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 nmap ; :Files<CR>
-nmap <Leader>o :NERDTreeToggle<CR>
+if !exists('g:vscode')
+    nmap <Leader>o :NERDTreeToggle<CR>
+endif    
 
+if !exists('g:vscode')
 nmap ]c <Plug>GitGutterNextHunk
 nmap [c <Plug>GitGutterPrevHunk
 nmap <Leader>hs <Plug>GitGutterStageHunk
 nmap <Leader>hu <Plug>GitGutterUndoHunk
-
-
-nmap <Leader>gi :YcmCompleter GoToInclude<CR>
-nmap <Leader>ge :YcmCompleter GoToDefinition<CR>
-nmap <Leader>gd :YcmCompleter GoToDeclaration<CR>
-nmap <Leader>gr :YcmCompleter GoToReferences<CR>
-
-
+endif    
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -44,7 +40,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 "autocmd FileType cpp inoremap ,c <ESC>bdwiclass <ESC>pa {<CR><++>;<CR>public:<CR><ESC>pa(){}<CR>~<ESC>pa(){}<CR>private:<CR><++>;};
 
-if has("win32")
+if has("win32") && !exists('g:vscode')
     map <F11> <Esc>:call libcallnr("gvimfullscreen_64.dll", "ToggleFullScreen", 0)<CR> 
 endif
 
@@ -53,10 +49,14 @@ set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
 
+inoremap jk <Esc>
+inoremap =<BS> <Esc>
 
+if !exists('g:vscode')
 nnoremap <F3> :cp<CR>
 nnoremap <F4> :cn<CR>
 nnoremap <F5> :Neomake!<CR>
+endif    
 
 nnoremap <Leader>, :bp<CR>
 nnoremap <Leader>. :bn<CR>

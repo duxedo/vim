@@ -26,7 +26,9 @@ set expandtab
 set scrolloff=3
 set autoindent
 set smartindent
-set wrap
+if !exists('g:vscode')
+    set wrap
+endif
 set backspace=indent,eol,start
 set splitbelow splitright
 set laststatus=2
