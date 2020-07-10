@@ -1,8 +1,8 @@
 filetype plugin off
 
-let plug_path = "plugged"
+"let path = expand('<sfile>:p:h')
 
-call plug#begin(plug_path)
+call plug#begin('$HOME/.vim/plugged')
 Plug 'VundleVim/Vundle.vim'
 if !exists('g:vscode')
 Plug 'scrooloose/nerdtree'
