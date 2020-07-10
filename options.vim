@@ -34,6 +34,9 @@ set splitbelow splitright
 set laststatus=2
 set background=dark
 
+set timeoutlen=200
+
+
 set exrc
 set noswapfile
 
