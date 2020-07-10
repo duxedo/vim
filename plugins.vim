@@ -1,38 +1,39 @@
 filetype plugin off
 
-set rtp+=$HOME/.vim/bundle/Vundle.vim
-call vundle#begin('$HOME/.vim/bundle')
-Plugin 'VundleVim/Vundle.vim'
+let plug_path = "plugged"
+
+call plug#begin(plug_path)
+Plug 'VundleVim/Vundle.vim'
 if !exists('g:vscode')
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 endif
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'tpope/vim-surround'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-surround'
 if !exists('g:vscode')
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 endif
-Plugin 'mileszs/ack.vim'
-Plugin 'hsanson/vim-android'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-eunuch'
-Plugin 'kana/vim-operator-user'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'rhysd/vim-clang-format'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'neomake/neomake'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'kshenoy/vim-signature'
+Plug 'mileszs/ack.vim'
+Plug 'hsanson/vim-android'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-eunuch'
+Plug 'kana/vim-operator-user'
+Plug 'Shougo/vimproc.vim'
+Plug 'rhysd/vim-clang-format'
+Plug 'scrooloose/nerdcommenter'
+Plug 'neomake/neomake'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'kshenoy/vim-signature'
 
 if has('nvim')
- Plugin 'JulioJu/neovim-qt-colors-solarized-truecolor-only'
- Plugin 'lifepillar/vim-solarized8'
+ Plug 'JulioJu/neovim-qt-colors-solarized-truecolor-only'
+ Plug 'lifepillar/vim-solarized8'
 else
-  Plugin 'altercation/vim-colors-solarized'
-  Plugin 'lifepillar/vim-solarized8'
+  Plug 'altercation/vim-colors-solarized'
+  Plug 'lifepillar/vim-solarized8'
 endif
-call vundle#end()            " required
+call plug#end()            " required
 
 filetype plugin indent on    " required:
