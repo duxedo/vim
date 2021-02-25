@@ -42,5 +42,7 @@ set noswapfile
 
 set sessionoptions+=resize,winpos,folds,tabpages
 set sessionoptions-=options
+if has("nvim")
 set inccommand=split
+endif
 set diffopt+=vertical
