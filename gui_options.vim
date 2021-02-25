@@ -17,9 +17,11 @@ if has("gui_running")
 else
 "    if !has("win32")
 "        let g:solarized_termcolors=256
-"        colorscheme solarized
+"       colorscheme solarized
 "    else
+    if has("termguicolors")
         set termguicolors
+    endif
         set background=dark
         let g:solarized_termtrans=0
         colorscheme solarized8

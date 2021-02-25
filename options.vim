@@ -42,3 +42,5 @@ set noswapfile
 
 set sessionoptions+=resize,winpos,folds,tabpages
 set sessionoptions-=options
+set inccommand=split
+set diffopt+=vertical
