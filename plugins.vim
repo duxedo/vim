@@ -1,12 +1,11 @@
 filetype plugin off
 
-"let path = expand('<sfile>:p:h')
-
 call plug#begin('$HOME/.vim/plugged')
 Plug 'VundleVim/Vundle.vim'
 if !exists('g:vscode')
 Plug 'scrooloose/nerdtree'
 endif
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
@@ -26,6 +25,8 @@ Plug 'neomake/neomake'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kshenoy/vim-signature'
+Plug 'udalov/kotlin-vim'
+Plug 'puremourning/vimspector'
 
 if has('nvim')
  Plug 'JulioJu/neovim-qt-colors-solarized-truecolor-only'
