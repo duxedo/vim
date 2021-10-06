@@ -1,0 +1,23 @@
+set nocompatible
+nnoremap <Space> <Nop>
+let mapleader = " "
+
+set history=500
+set encoding=utf-8
+
+source $HOME/.vim/options.vim
+
+inoremap jk <Esc>
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Return to last edit position when opening files (You want this!)
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+inoremap ,, <Esc>/<++><Enter>"_c4l
+vnoremap ,, <Esc>/<++><Enter>"_c4l
+map ,, <Esc>/<++><Enter>"_c4l
+autocmd FileType cpp inoremap ,c <ESC>bdwiclass <ESC>pa {<CR><++>;<CR>public:<CR><ESC>pa(){}<CR>~<ESC>pa(){}<CR>private:<CR><++>;};
+
