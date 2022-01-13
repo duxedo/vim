@@ -28,6 +28,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'kshenoy/vim-signature'
 Plug 'udalov/kotlin-vim'
 Plug 'puremourning/vimspector'
+Plug 'cdelledonne/vim-cmake'
 
 if has('nvim')
  Plug 'JulioJu/neovim-qt-colors-solarized-truecolor-only'
