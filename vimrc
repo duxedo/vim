@@ -19,10 +19,14 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <M-h> :bp<CR>
+nnoremap <M-l> :bn<CR>
+nnoremap <M-s> :vert sb<CR>
+nnoremap <M-c> :bd
 
 nmap ; :Files<CR>
 if !exists('g:vscode')
-    nmap <Leader>o :NERDTreeToggle<CR>
+    nmap <Leader>o :FZF<CR>
 endif    
 
 if !exists('g:vscode')
@@ -36,6 +40,11 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+let g:nnn#action = {
+      \ '<c-t>': 'tab split',
+      \ '<c-s>': 'vsplit',
+      \ '<c-v>': 'split' }
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif

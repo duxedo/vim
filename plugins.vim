@@ -2,9 +2,6 @@ filetype plugin off
 
 call plug#begin('$HOME/.vim/plugged')
 Plug 'VundleVim/Vundle.vim'
-if !exists('g:vscode')
-Plug 'scrooloose/nerdtree'
-endif
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -29,6 +26,7 @@ Plug 'kshenoy/vim-signature'
 Plug 'udalov/kotlin-vim'
 Plug 'puremourning/vimspector'
 Plug 'cdelledonne/vim-cmake'
+Plug 'mcchrish/nnn.vim'
 
 if has('nvim')
  Plug 'JulioJu/neovim-qt-colors-solarized-truecolor-only'
