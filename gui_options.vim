@@ -19,11 +19,11 @@ else
 "        let g:solarized_termcolors=256
 "       colorscheme solarized
 "    else
-    if has("termguicolors")
+     if has("termguicolors")
         set termguicolors
-    endif
+     endif
         set background=dark
         let g:solarized_termtrans=0
-        colorscheme solarized8
+        colorscheme catppuccin
 "    endif
 endif

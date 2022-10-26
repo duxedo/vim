@@ -27,6 +27,7 @@ Plug 'udalov/kotlin-vim'
 Plug 'puremourning/vimspector'
 Plug 'cdelledonne/vim-cmake'
 Plug 'mcchrish/nnn.vim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 if has('nvim')
  Plug 'JulioJu/neovim-qt-colors-solarized-truecolor-only'
@@ -38,3 +39,6 @@ endif
 call plug#end()            " required
 
 filetype plugin indent on    " required:
+let g:catppuccin_flavour = "macchiato" " latte, frappe, macchiato, mocha
+lua require("catppuccin").setup()
+
