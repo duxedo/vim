@@ -1,7 +1,6 @@
 filetype plugin off
 
 call plug#begin('$HOME/.vim/plugged')
-Plug 'VundleVim/Vundle.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'

@@ -41,9 +41,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-inoremap <silent><expr> <TAB>
+inoremap <silent><expr> <C-Space>
       \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
@@ -79,7 +78,6 @@ set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
 
-inoremap jk <Esc>
 inoremap =<BS> <Esc>
 
 if !exists('g:vscode')
@@ -93,7 +91,7 @@ nnoremap <Leader>. :bn<CR>
 nnoremap <Leader>/ :ls<CR>:b
 
 nnoremap <Leader>cd :cd %:p:h<CR>
-
+cmap w!! w !sudo tee > /dev/null %
 
 highlight Comment gui=NONE term=NONE
 
@@ -101,3 +99,4 @@ exec 'source' path . '/local.vim'
 
 set exrc
 set secure
+set title
